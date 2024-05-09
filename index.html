@@ -11,13 +11,31 @@
 
 <body>
     <section class="form-section">
-        <h1>To Do App</h1>
-        <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Enter a task here</label>
-          </div>
+        <div class="container bg-grey">
+            <h1 style="padding-top: 20px;">To Do App</h1>
+            <div style="display: flex; justify-content: center;align-items: center; gap: 20px;">
+                <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Enter a task here</label>
+                </div>
+                <button type="button" style="width: 100px; height: 40px; border-radius: 10px;">
+                    Zapisz
+                </button>
+            </div>
+            <div class="table-box">
+                <table>
+                    <tr>
+                        <th>№</th>
+                        <th>Todo item</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+       
     </section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
