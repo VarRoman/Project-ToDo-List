@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    background-color: rgba(62, 62, 62, 0.815);
+    color: white;
+}
+
+input{
+    color: rgba(62, 62, 62, 0.815);  
+    border: none;
+    border-bottom: 2px solid black; 
+    font-size: large;
+    background: rgba(62, 62, 62, 0.815); 
+    color: white;
+}
