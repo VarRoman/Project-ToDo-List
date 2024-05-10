@@ -1,51 +1,70 @@
 h1{
-    text-align: center;
-  
-    color: white;
+  text-align: center;
+  color: white;
 }
 
 .form-section{
- 
+
+}
+.container{
+  max-width: 950px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 .form-section .user-box {
-    position: relative;
-  }
+  position: relative;
+}
+.bg-grey{
+  background-color:   #636363;
+  border-radius: 15px;
+}
+
+.form-section .user-box input {
+  border:1px solid rgb(208, 205, 205);
+  border-radius: 6px;
+  width: 400px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+
+transition: ease 0.3s ;
+  outline: none;
+  background: transparent;
+}
+.form-section .user-box label {
+  position: absolute;
+  top:0;
+  left: 10px;
+ 
+  font-size: 16px;
+  color: #b3b1b1;
+  pointer-events: none;
+  transition: .5s;
+  padding: 10px 5px;
+}
+
+.form-section .user-box input:focus ~ label,
+.form-section .user-box input:valid ~ label {
+  top: -15px;
+  left: 10px;
+  color: #2C75FF;
+  font-size: 12px;
+  background:   #636363;
   
-  .form-section .user-box input {
-    border:1px solid black;
-    width: 400px;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
- transition: ease 0.3s ;
-    outline: none;
-    background: transparent;
-  }
-  .form-section .user-box label {
-    position: absolute;
-    top:0;
-    left: 10px;
-   
-    font-size: 16px;
-    color: #b3b1b1;
-    pointer-events: none;
-    transition: .5s;
-    padding: 10px 5px;
-  }
-  
-  .form-section .user-box input:focus ~ label,
-  .form-section .user-box input:valid ~ label {
-    top: -15px;
-    left: 10px;
-    color: rgba(0, 0, 255, 0.718);
-    font-size: 12px;
-    background: white;
-    
-    
-  }
-  .form-section .user-box input:focus ,
-  .form-section .user-box input:valid  {
-   
-    border:1px solid rgba(0, 0, 255, 0.718);
-  }
+}
+.form-section .user-box input:focus ,
+.form-section .user-box input:valid  {
+ 
+  border:1px solid #2C75FF;
+}
+
+.form-section .table-box {
+  background-color: #303030;
+  color: white;
+  font-size: 14px;
+  font-family: Roboto;
+}
+
+.form-section .table-box th {
+  padding: 10px;
+}
