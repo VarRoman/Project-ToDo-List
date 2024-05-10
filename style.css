@@ -3,9 +3,6 @@ h1{
   color: white;
 }
 
-.form-section{
-
-}
 .container{
   max-width: 950px;
   padding: 0 20px;
@@ -54,17 +51,37 @@ transition: ease 0.3s ;
 }
 .form-section .user-box input:focus ,
 .form-section .user-box input:valid  {
- 
   border:1px solid #2C75FF;
 }
 
-.form-section .table-box {
+.form-section .table-box table {
+  border-radius: 5px;
+  margin: auto;
   background-color: #303030;
   color: white;
   font-size: 14px;
   font-family: Roboto;
+  width: 550px;
+  border-spacing: 5px;
 }
+
 
 .form-section .table-box th {
   padding: 10px;
 }
+
+
+
+#th2 {
+  padding-right: 150px;
+}
+
+#th3 {
+  padding-right: 80px;
+}
+
+#th4 {
+  padding-right: 100px;
+}
+
+
