@@ -1,18 +1,43 @@
+
 h1{
   text-align: center;
   color: white;
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
 .container{
   max-width: 700px;
   padding: 0 20px;
   margin: 0 auto;
+  
 } 
+body{
+  background: linear-gradient(130deg, rgb(159, 124, 223) 10%, rgb(87, 77, 226), rgb(30, 173, 216) );
+  
+}
+.form-section{
+  padding: 50px 0;
+  min-height: 100vh;
 
+  
+}
 .form-section .user-box {
   position: relative;
 }
-
 .bg-grey{
   background-color:   #636363;
   border-radius: 15px;
@@ -20,9 +45,9 @@ h1{
 
 .form-section .user-box input {
   border:1px solid rgb(208, 205, 205);
-  border-radius: 6px;
-  width: 400px;
-  padding: 10px 0;
+  border-radius: 15px;
+  width: 500px;
+  padding: 12px 10px;
   font-size: 16px;
   color: #fff;
 
@@ -32,131 +57,173 @@ transition: ease 0.3s ;
 }
 .form-section .user-box label {
   position: absolute;
-  top:0;
+  top:13px;
   left: 10px;
- 
-  font-size: 10px;
+  
+  
+  font-size: 14px;
   color: #b3b1b1;
   pointer-events: none;
   transition: .5s;
-  padding: 4px 4px;
+  padding: 2px 2px;
+
 }
 
 .form-section .user-box input:focus ~ label,
 .form-section .user-box input:valid ~ label {
-  top: -15px;
+  top: -8px;
   left: 10px;
   color: #2C75FF;
   font-size: 12px;
   background:   #636363;
+  position: absolute;
   
 }
 .form-section .user-box input:focus ,
 .form-section .user-box input:valid  {
-border:1px solid #2C75FF;
+  border:1px solid #2C75FF;
 }
 
-.form-section .table-box table {
-  border-radius: 5px;
-  margin: auto;
-  background-color: #303030;
+.form-section .table-box {
+position: relative;
   color: white;
   font-size: 14px;
   font-family: Roboto;
-  width: 550px;
-  border-spacing: 5px;
+  padding: 20px 0;
 }
+
+tr{
+  transition: all ease 0.5s;
+  opacity: 0.3; 
+transform: translate(-50%, 0%);
+}
+.table-item {
+
+  opacity: 1;
+transform: translate(0px, 0%);
+}
+#table-stats{
+
+ overflow:hidden;
+ background-color: #303030;
+position: relative;
+  width: 100%;
+  border-radius: 15px;
+}
+.form-section .table-box th {
+  padding: 13px 10px 10px 10px;
+  
+
+}
+.form-section .table-box tr {
+ position: relative;
+}
+ .form-section th::before {
+  content: "";
+  position: absolute;
+   bottom: -3px;
+   left: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: white;
+}
+
 
 * {
-  font-family: "Roboto", sans-serif;
+font-family: "Roboto", sans-serif;
 }
 
-button {
-  outline: none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius: 40px;
-  background: white;
-  border: 2px solid #2C75FF;
-  color: #2C75FF;
-  letter-spacing: 1px;
-  text-shadow: 0;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.25s ease;
+#create-button {
+outline: none;
+height: 40px;
+text-align: center;
+width: 130px;
+border-radius: 15px;
+background: linear-gradient(130deg, rgb(159, 124, 223) 10%, rgb(87, 77, 226), rgb(30, 173, 216) );
+border: 2px solid white  ;
+color: white;
+letter-spacing: 1px;
+text-shadow: 0;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.25s ease;
 }
-button:hover {
-  color: white;
-  background: #2C75FF;
+#create-button:hover {
+color: #2C75FF;
+background: white;
 }
-button:active {
-  letter-spacing: 2px;
+#create-button:active {
+letter-spacing: 2px;
 }
-button:after {
-  content: "Zapisz";
-}
-
-.onclic {
-  width: 40px;
-  border-color: #bbbbbb;
-  border-width: 3px;
-  font-size: 0;
-  border-left-color: #2C75FF;
-  -webkit-animation: rotating 2s 0.25s linear infinite;
-          animation: rotating 2s 0.25s linear infinite;
-}
-.onclic:after {
-  content: "";
-}
-.onclic:hover {
-  color: #2C75FF;
-  background: white;
+#create-button:after {
+content: "Zapisz";
 }
 
-.validate {
-  font-size: 13px;
-  color: white;
-  background: #2C75FF;
+#create-button.onclic {
+width: 40px;
+border-color: white;
+border-width: 3px;
+font-size: 0;
+border-radius: 100px;
+border-left-color: #2C75FF;
+-webkit-animation: rotating 0.6s 0.25s linear infinite;
+        animation: rotating 0.6s 0.25s linear infinite;
 }
-.validate:after {
-  font-family: "FontAwesome";
-  content: "";
+#create-button.onclic:after {
+content: "";
+}
+#create-button.onclic:hover {
+color: #2C75FF;
+background: white;
+}
+
+#create-button.validate {
+
+font-size: 13px;
+color: white;
+background: linear-gradient(130deg, rgb(159, 124, 223) 10%, rgb(87, 77, 226), rgb(30, 173, 216) );
+}
+#create-button.validate:after {
+font-family: "FontAwesome";
+content: "";
 }
 
 @-webkit-keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
 }
 
 @keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
 }
 
-.form-section .table-box th {
-  padding: 10px;
+.delete-button{
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  opacity: 0.7;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  
 }
+.delete-button:hover{
+  transform: scale(1.2) rotate(360deg);
+  opacity: 1;
 
-#th2 {
-  padding-right: 150px;
 }
-
-#th3 {
-  padding-right: 80px;
+.delete-button img{
+  width: 26px;
+  height: 26px;
 }
-
-#th4 {
-  padding-right: 100px;
-}
-
-

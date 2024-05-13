@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
     <section class="form-section">
         <div class="container bg-grey">
-            <h1 style="padding-top: 20px;">To Do App</h1>
+            <h1 style="padding: 20px;">To Do App</h1>
             <div style="display: flex; justify-content: center;align-items: center; gap: 20px;">
                 <div class="user-box">
-                    <input type="text" name="" required="">
-                    <label>Enter a task here</label>
+                    <input  type="text" id="name1" name="" required="">
+                    <label>Wpisz tutaj zadanie</label>
                 </div>
-                <button type="button" style="width: 100px; height: 40px; border-radius: 10px;">
-                    Zapisz
-                </button>
+               
+                    <button id="create-button"></button>
+                  
             </div>
             <div class="table-box">
-                <table>
-                    <tr>
-                        <th>№</th>
-                        <th id="th2">Todo item</th>
-                        <th id="th3">Status</th>
-                        <th id="th4">Actions</th>
-                    </tr>
+                <table id="table-stats">
+                    
+                    <tr class="table-item">
+                      <th>№</th>
+                      <th id="th2">Rzecz do zrobienia</th>
+                      <th id="th3">Status</th>
+                    <th id="th5">Działania</th>
+                  </tr>                                                  
                 </table>
-            </div>
+            </div>                 
         </div>
-       
+
     </section>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
     <script src="./script.js"></script>
+              
 </body>
 
 </html>
